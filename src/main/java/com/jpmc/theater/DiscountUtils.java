@@ -10,10 +10,10 @@ public class DiscountUtils {
     }
 
     private static final int MOVIE_CODE_SPECIAL = 1;
+    private static double specialDiscount = 0;
+    private static double sequenceDiscount = 0;
 
     public static double getDiscount(int showSequence, LocalDateTime dateTime, int specialCode, double ticketPrice) {
-        double specialDiscount = 0;
-        double sequenceDiscount = 0;
 
         // time between 11am ~ 4pm
         LocalDateTime startDateTime = LocalDateTime.of(LocalDateProvider.singleton().currentDate(), LocalTime.of(11, 0));
