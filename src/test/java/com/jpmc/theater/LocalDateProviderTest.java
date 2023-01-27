@@ -8,5 +8,16 @@ class LocalDateProviderTest {
 
         LocalDateProvider.singleton();
     }
+
+    @Test
+    void testSingleton2() {
+
+        LocalDateProvider.singleton();
+    }
+
+    @Test
+    void testCurrentDate() {
+        (new LocalDateProvider()).currentDate();
+    }
 }
 
