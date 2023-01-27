@@ -13,6 +13,12 @@ class TheaterTest {
     }
 
     @Test
+    void testConstructor2() {
+        LocalDateProvider localDateProvider = new LocalDateProvider();
+        assertSame((new Theater(localDateProvider)).provider, localDateProvider);
+    }
+
+    @Test
     void testReserve() {
 
         Theater theater = new Theater(new LocalDateProvider());
@@ -67,6 +73,23 @@ class TheaterTest {
     void testReserve9() {
         Theater theater = new Theater(new LocalDateProvider());
         assertThrows(IllegalStateException.class, () -> theater.reserve(new Customer("Name", "42"), 0, 1));
+    }
+
+    @Test
+    void testReserve10() {
+        Theater theater = new Theater(new LocalDateProvider());
+        theater.reserve(new Customer("Name", "42"), 1, 1);
+    }
+
+    @Test
+    void testReserve11() {
+        Theater theater = new Theater(new LocalDateProvider());
+        assertThrows(IllegalStateException.class, () -> theater.reserve(new Customer("Name", "42"), 0, 1));
+    }
+
+    @Test
+    void testPrintSchedule() {
+        (new Theater(new LocalDateProvider())).printSchedule();
     }
 
 }
