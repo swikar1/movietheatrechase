@@ -21,7 +21,9 @@ public class DiscountUtils {
 
         if (MOVIE_CODE_SPECIAL == specialCode) {
             specialDiscount = ticketPrice * 0.2;  // 20% discount for special movie
-        } else if (dateTime.isAfter(startDateTime) && dateTime.isBefore(endDateTime)) {
+        }
+
+        if (dateTime.isAfter(startDateTime) && dateTime.isBefore(endDateTime)) {
             specialDiscount = ticketPrice * 0.25;  // 25% discount for movie
         }
 
