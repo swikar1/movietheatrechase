@@ -1,9 +1,14 @@
 package com.jpmc.theater;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class DiscountUtils {
+
+    private static Logger logger = LoggerFactory.getLogger(DiscountUtils.class);
 
     private DiscountUtils() {
         throw new IllegalStateException("Utility class");

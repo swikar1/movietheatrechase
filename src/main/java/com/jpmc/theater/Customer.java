@@ -1,11 +1,16 @@
 package com.jpmc.theater;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Objects;
 
 public class Customer {
 
     private String name;
     private String id;
+
+    private static Logger logger = LoggerFactory.getLogger(Customer.class);
 
     /**
      * @param name customer name

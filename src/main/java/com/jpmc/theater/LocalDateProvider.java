@@ -1,8 +1,14 @@
 package com.jpmc.theater;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDate;
 
 public class LocalDateProvider {
+
+    private static Logger logger = LoggerFactory.getLogger(LocalDateProvider.class);
+
     private static LocalDateProvider instance = null;
 
     /**

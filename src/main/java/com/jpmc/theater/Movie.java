@@ -1,9 +1,15 @@
 package com.jpmc.theater;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.Duration;
 import java.util.Objects;
 
 public class Movie {
+
+    private static Logger logger = LoggerFactory.getLogger(Movie.class);
+
 
     private String title;
     private String description;

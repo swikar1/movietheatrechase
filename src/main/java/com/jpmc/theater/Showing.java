@@ -1,8 +1,15 @@
 package com.jpmc.theater;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDateTime;
 
 public class Showing {
+
+    private static Logger logger = LoggerFactory.getLogger(Showing.class);
+
+
     private Movie movie;
     private int sequenceOfTheDay;
     private LocalDateTime showStartTime;

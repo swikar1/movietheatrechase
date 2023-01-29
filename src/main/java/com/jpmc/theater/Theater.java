@@ -1,6 +1,8 @@
 package com.jpmc.theater;
 
 import com.google.gson.Gson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -9,6 +11,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Theater {
+
+    private static Logger logger = LoggerFactory.getLogger(Theater.class);
+
 
     LocalDateProvider provider;
     private List<Showing> schedule;

@@ -1,6 +1,13 @@
 package com.jpmc.theater;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Reservation {
+
+    private static Logger logger = LoggerFactory.getLogger(Reservation.class);
+
+
     private Customer customer;
     private Showing showing;
     private int audienceCount;
@@ -15,3 +22,5 @@ public class Reservation {
         return showing.getMovieFee() * audienceCount;
     }
 }
+
+
